@@ -1,0 +1,113 @@
+{  
+  "root": true,
+  "ecmaFeatures": {
+        "modules": true,
+        "spread" : true,
+        "restParams" : true
+    },
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"env": {
+		"browser": true,
+		"amd": true,
+		"node": true,
+		"cypress/globals": true
+	},
+	"extends": [
+		"airbnb",
+		"plugin:prettier/recommended",
+		"plugin:cypress/recommended",
+		"plugin:chai-friendly/recommended",
+    "prettier"
+	],
+	"plugins": ["simple-import-sort", "prettier", "cypress", "chai-friendly"],
+	"ignorePatterns": ["**/*.html"],
+	"rules": {
+    "no-unused-vars": "warn",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "semi": "error",
+    "no-undef" : 2,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			},
+			{ "usePrettierrc": true }
+		],
+		"react/require-default-props": "off",
+		"import/extensions": "off",
+		"jsx-a11y/interactive-supports-focus": "off",
+		"no-shadow": "off",
+		"import/no-extraneous-dependencies": "off",
+		"no-console": "off",
+		"import/prefer-default-export": "off",
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": ["Link"],
+				"specialLink": ["hrefLeft", "hrefRight"],
+				"aspects": ["invalidHref", "preferButton"]
+			}
+		],
+		"indent": [
+			"error",
+			2,
+			{
+				"SwitchCase": 1,
+				"ignoredNodes": ["ConditionalExpression"]
+			}
+		],
+		"react/jsx-indent": ["error", 2],
+		"react/jsx-indent-props": ["error", 2],
+		"quotes": ["error", "double", { "allowTemplateLiterals": true }],
+		"no-useless-escape": "error",
+		"cypress/no-assigning-return-values": "error",
+		"cypress/no-unnecessary-waiting": "error",
+		"cypress/assertion-before-screenshot": "warn",
+		"cypress/no-force": "warn",
+		"cypress/no-async-tests": "error",
+		"cypress/no-pause": "error",
+		"chai-friendly/no-unused-expressions": 2,
+		"react/function-component-definition": [
+			"error",
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function"
+			}
+		],
+		"react/jsx-props-no-spreading": [
+			"error",
+			{
+				"custom": "ignore"
+			}
+		],
+		"react/forbid-prop-types": 0,
+		"class-methods-use-this": "off",
+		"no-warning-comments": 0,
+		"line-comment-position": ["error", { "position": "beside" }],
+		"no-inline-comments": "error",
+		"multiline-comment-style": ["error", "starred-block"],
+		"lines-around-comment": [
+			"error",
+			{
+				"beforeBlockComment": false
+			}
+		],
+		"no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }]
+	}
+}
