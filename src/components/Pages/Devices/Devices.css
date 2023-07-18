@@ -1,0 +1,43 @@
+.devices {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.devices h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.devices table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.devices th,
+.devices td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.devices th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.devices td:first-child {
+    font-weight: bold;
+}
+
+/* Additional styles for table responsiveness */
+@media (max-width: 768px) {
+    .devices table {
+        font-size: 14px;
+    }
+
+    .devices th,
+    .devices td {
+        padding: 8px;
+    }
+}

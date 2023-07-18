@@ -1,10 +1,10 @@
-{  
-  "root": true,
-  "ecmaFeatures": {
-        "modules": true,
-        "spread" : true,
-        "restParams" : true
-    },
+{
+	"root": true,
+	"ecmaFeatures": {
+		"modules": true,
+		"spread": true,
+		"restParams": true
+	},
 	"parserOptions": {
 		"ecmaVersion": 2020,
 		"sourceType": "module",
@@ -28,18 +28,24 @@
 		"plugin:prettier/recommended",
 		"plugin:cypress/recommended",
 		"plugin:chai-friendly/recommended",
-    "prettier"
+		"prettier"
 	],
-	"plugins": ["simple-import-sort", "prettier", "cypress", "chai-friendly"],
-	"ignorePatterns": ["**/*.html"],
+	"plugins": [
+		"simple-import-sort",
+		"prettier",
+		"cypress",
+		"chai-friendly",
+		"jsx-a11y"
+	],
+	"ignorePatterns": ["**/*.html", "__tests__", "__test__","**/*.js"],
 	"rules": {
-    "no-unused-vars": "warn",
-    "func-names": "off",
-    "no-process-exit": "off",
-    "object-shorthand": "off",
-    "semi": "error",
-    "no-undef" : 2,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"no-unused-vars": "warn",
+		"func-names": "off",
+		"no-process-exit": "off",
+		"object-shorthand": "off",
+		"semi": "error",
+		"no-undef": 2,
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
 		"prettier/prettier": [
 			"error",
 			{
@@ -50,6 +56,7 @@
 		"react/require-default-props": "off",
 		"import/extensions": "off",
 		"jsx-a11y/interactive-supports-focus": "off",
+		"jsx-a11y/label-has-associated-control": "off",
 		"no-shadow": "off",
 		"import/no-extraneous-dependencies": "off",
 		"no-console": "off",
@@ -74,7 +81,7 @@
 		],
 		"react/jsx-indent": ["error", 2],
 		"react/jsx-indent-props": ["error", 2],
-		"quotes": ["error", "double", { "allowTemplateLiterals": true }],
+		"quotes": ["error", "single", { "allowTemplateLiterals": true }],
 		"no-useless-escape": "error",
 		"cypress/no-assigning-return-values": "error",
 		"cypress/no-unnecessary-waiting": "error",
@@ -82,7 +89,7 @@
 		"cypress/no-force": "warn",
 		"cypress/no-async-tests": "error",
 		"cypress/no-pause": "error",
-		"chai-friendly/no-unused-expressions": 2,
+		"chai-friendly/no-unused-expressions": "error",
 		"react/function-component-definition": [
 			"error",
 			{

@@ -1,4 +1,6 @@
-# Jest Login Test Cases
+# Jest 
+
+## Login Test Cases
 
 ### 1. Successful login:
 
@@ -49,4 +51,7 @@ Verify that the login page has appropriate security measures in place.
 Input: Attempt to perform unauthorized actions or inject malicious code.
 Expected outcome: The login page prevents unauthorized access and protects against common security vulnerabilities.
 
-#### Potential new test case : Button should be disabled by default
+### Potential new test case : Button should be disabled by default
+
+
+## Dashboard Test Cases

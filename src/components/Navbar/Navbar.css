@@ -1,0 +1,138 @@
+.navbar {
+    background-color: #060b26;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.collapse{
+    text-decoration: none;
+    color:#f5f5f5;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    width: 120px;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 5px 20px;
+}
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+}
+
+.nav-menu {
+    background-color: #060b26;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+.nav-text a:hover {
+    background-color: #1a83ff;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.navbar-toggle {
+    background-color: #060b26;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-bottom{
+    font-size: 26px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-bottom a {
+    margin: 10px 10px;
+    padding: 13px 15px 10px 15px;
+    border-radius: 4px;
+}
+.nav-bottom a:hover {
+    background-color: #1a83ff;
+}
+
+span {
+    margin-left: 16px;
+}
+
+.nav-btn{
+    width: 250px;
+}
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:120px;
+    left:220px;
+    height: 200px;
+    margin: auto;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    color: #060b26;
+}
+
+.popup-arrow {
+    color: rgb(255, 255, 255);
+}
+
+[role='tooltip'].popup-content {
+    width: 60vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+
+[data-popup='tooltip'].popup-overlay {
+    background: transparent;
+}

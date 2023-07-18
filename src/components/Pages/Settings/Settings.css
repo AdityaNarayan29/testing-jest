@@ -1,0 +1,52 @@
+.settings {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.settings h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.settings h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.settings .appearance-section,
+.settings .notifications-section,
+.settings .language-section {
+    margin-bottom: 30px;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.settings select,
+.settings input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Additional styles for theme selector */
+.settings .theme-selector select {
+    width: 150px;
+    padding: 5px;
+}
+
+/* Additional styles for notification toggle */
+.settings .notification-toggle input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+/* Additional styles for language selector */
+.settings .language-selector select {
+    width: 200px;
+    padding: 5px;
+}

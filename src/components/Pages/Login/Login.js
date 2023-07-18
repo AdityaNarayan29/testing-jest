@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './Login.css';
 
-const LoginPage = ({ onSubmit }) => {
+const LoginPage = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [rememberMe, setRememberMe] = useState(false);
@@ -20,33 +21,23 @@ const LoginPage = ({ onSubmit }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		// Validate email format using regex
-		// const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-		// const isEmailValid = emailRegex.test(email);
-
-		// if (!isEmailValid) {
-		// 	console.log('Invalid email format');
-		// 	return;
-		// }
-
-		// with the email and password for authentication
 		console.log('Email:', email);
 		console.log('Password:', password);
 		console.log('Remember me:', rememberMe);
 
-		// Reset the form
 		setEmail('');
 		setPassword('');
 		setRememberMe(false);
-
-		// Call the onSubmit function provided by the parent component
-		// onSubmit(email);
 	};
 
 	return (
-		<div data-testid='login-page'>
+		<div data-testid='login-page' className='login-page'>
 			<h2>Login Page</h2>
-			<form data-testid='login-form' onSubmit={handleSubmit}>
+			<form
+				data-testid='login-form'
+				className='login-form'
+				onSubmit={handleSubmit}
+			>
 				<div>
 					<label htmlFor='email-input'>Email:</label>
 					<input
