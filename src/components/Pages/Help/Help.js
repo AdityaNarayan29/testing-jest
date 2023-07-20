@@ -3,7 +3,7 @@ import './Help.css';
 
 function Help() {
 	return (
-		<div className='help-container'>
+		<div className='help-container help' data-testid='help'>
 			<h1>Help Component</h1>
 			<p>
 				The Help component plays a crucial role in enhancing the user experience

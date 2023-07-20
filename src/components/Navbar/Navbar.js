@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Popup from 'reactjs-popup';
+// import DashboardMUI from '../DashboardMUI/DashboardMUI';
 
 const Navbar = () => {
 	const [sidebar, setSidebar] = useState(false);
@@ -33,7 +34,11 @@ const Navbar = () => {
 						</div>
 						{SidebarData.map((item, index) => {
 							return (
-								<li key={index} className={item.cName}>
+								<li
+									key={index}
+									className={item.cName}
+									data-testid={item.title + '-button'}
+								>
 									<Link to={item.path}>
 										{item.icon}
 										<span>{item.title}</span>
@@ -41,6 +46,12 @@ const Navbar = () => {
 								</li>
 							);
 						})}
+						<li className='nav-text' data-testid={'dashboardmui-button'}>
+							<Link to='/dashboardmui'>
+								<AiIcons.AiFillHome />
+								<span>Dashboard-Mui</span>
+							</Link>
+						</li>
 					</ul>
 					<div>
 						<div className='nav-text '>
@@ -57,10 +68,14 @@ const Navbar = () => {
 							</a>
 						</div>
 						<div className='nav-bottom'>
-							<Link to='/help' onClick={showSidebar}>
+							<Link to='/help' onClick={showSidebar} data-testid='help-button'>
 								<AiIcons.AiOutlineQuestionCircle />
 							</Link>
-							<Link to='/settings' onClick={showSidebar}>
+							<Link
+								to='/settings'
+								onClick={showSidebar}
+								data-testid='settings-button'
+							>
 								<AiIcons.AiFillSetting />
 							</Link>
 							<Link to='/' onClick={showSidebar} data-testid='logout-button'>

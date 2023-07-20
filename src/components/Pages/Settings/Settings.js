@@ -23,7 +23,7 @@ function Settings() {
 	};
 
 	return (
-		<div className='settings'>
+		<div className='settings' data-testid='settings'>
 			<h1>Settings</h1>
 			<div className='appearance-section'>
 				<h2>Appearance</h2>
