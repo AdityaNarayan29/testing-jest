@@ -7,10 +7,18 @@ import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Popup from 'reactjs-popup';
 // import DashboardMUI from '../DashboardMUI/DashboardMUI';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 const Navbar = () => {
 	const [sidebar, setSidebar] = useState(false);
+	const [instance, setInstance] = React.useState('');
 
+	const handleChange = (event) => {
+		setInstance(event.target.value);
+	};
 	const showSidebar = () => setSidebar(!sidebar);
 	return (
 		<>
@@ -64,6 +72,25 @@ const Navbar = () => {
 								>
 									<h2>Select Instance</h2>
 									<div>Instances content here !!</div>
+									<FormControl sx={{ m: 1, minWidth: 120 }}>
+										<InputLabel id='demo-simple-select-helper-label'>
+											Instance
+										</InputLabel>
+										<Select
+											labelId='demo-simple-select-helper-label'
+											id='demo-simple-select-helper'
+											value={instance}
+											label='Instance'
+											onChange={handleChange}
+										>
+											<MenuItem value=''>
+												<em>None</em>
+											</MenuItem>
+											<MenuItem value={10}>Ten</MenuItem>
+											<MenuItem value={20}>Twenty</MenuItem>
+											<MenuItem value={30}>Thirty</MenuItem>
+										</Select>
+									</FormControl>
 								</Popup>
 							</a>
 						</div>
