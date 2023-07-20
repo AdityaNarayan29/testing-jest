@@ -56,7 +56,7 @@ const DashboardMUI = () => {
 		],
 		['Jaden Collins', 'Attorney', 'Santa Ana'],
 		['Franky Rees', 'Business Analyst', 'St. Petersburg'],
-		['Aaren Rose', null, 'Toledo'],
+		['Aaren Rose', 'null', 'Toledo'],
 		['Johnny Jones', 'Business Analyst', 'St. Petersburg'],
 		['Jimmy Johns', 'Business Analyst', 'Baltimore'],
 		['Jack Jackson', 'Business Analyst', 'El Paso'],
@@ -111,23 +111,6 @@ const DashboardMUI = () => {
 							<MenuItem value={'100%'}>100%</MenuItem>
 						</Select>
 					</FormControl>
-					{/* <FormControl>
-						<InputLabel id='demo-simple-select-label'>
-							Max Table Body Height
-						</InputLabel>
-						<Select
-							labelId='demo-simple-select-label'
-							id='demo-simple-select'
-							value={tableBodyMaxHeight}
-							style={{ width: '200px', marginBottom: '10px' }}
-							onChange={(e) => setTableBodyMaxHeight(e.target.value)}
-						>
-							<MenuItem value={''}>[blank]</MenuItem>
-							<MenuItem value={'400px'}>400px</MenuItem>
-							<MenuItem value={'800px'}>800px</MenuItem>
-							<MenuItem value={'100%'}>100%</MenuItem>
-						</Select>
-					</FormControl> */}
 					<FormControl>
 						<InputLabel id='demo-simple-select-label'>Search Button</InputLabel>
 						<Select

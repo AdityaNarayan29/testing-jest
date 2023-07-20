@@ -113,6 +113,7 @@ nav span {
 .popup-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
     top:120px;
     left:220px;

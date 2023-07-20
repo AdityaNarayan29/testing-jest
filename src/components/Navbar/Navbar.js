@@ -36,7 +36,7 @@ const Navbar = () => {
 							</li>
 							<li className='navbar-toggle '>
 								<Link to='#' className='menu-bars'>
-									<AiIcons.AiOutlineClose />
+									<AiIcons.AiOutlineLeft />
 								</Link>
 							</li>
 						</div>
@@ -64,7 +64,7 @@ const Navbar = () => {
 					<div>
 						<div className='nav-text '>
 							<a>
-								<AiIcons.AiFillCode />
+								<AiIcons.AiFillCode style={{ fontSize: '32px' }} />
 								<Popup
 									trigger={<span className='nav-btn'>Instances</span>}
 									position='right center'
