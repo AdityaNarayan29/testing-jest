@@ -1,11 +1,13 @@
 import MUIDataTable from 'mui-datatables';
 import React, { useState } from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import { createTheme } from '@mui/material/styles';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {
+	FormControl,
+	InputLabel,
+	Select,
+	MenuItem,
+	Button,
+} from '@mui/material';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { Box } from '@mui/material';
@@ -19,7 +21,7 @@ const DashboardMUI = () => {
 	const [responsive, setResponsive] = useState('vertical');
 	const [tableBodyHeight, setTableBodyHeight] = useState('400px');
 	const [tableBodyMaxHeight, setTableBodyMaxHeight] = useState('400px');
-	const [searchBtn, setSearchBtn] = useState(true);
+	const [searchBtn, setSearchBtn] = useState('true');
 	const [downloadBtn, setDownloadBtn] = useState(true);
 	const [printBtn, setPrintBtn] = useState(true);
 	const [viewColumnBtn, setViewColumnBtn] = useState(true);
@@ -73,8 +75,14 @@ const DashboardMUI = () => {
 			<Box m={3}>
 				<CacheProvider value={muiCache} sx={{ m: 2 }}>
 					<ThemeProvider theme={createTheme()}>
+						<Button variant='text' data-testid='buttonnew'>
+							Text
+						</Button>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel
+								id='demo-simple-select-label'
+								sx={{ bgcolor: '#fff' }}
+							>
 								Responsive Option
 							</InputLabel>
 							<Select
@@ -100,12 +108,12 @@ const DashboardMUI = () => {
 							</Select>
 						</FormControl>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel id='table-body-height-label' sx={{ bgcolor: '#fff' }}>
 								Table Body Height
 							</InputLabel>
 							<Select
-								labelId='demo-simple-select-label'
-								id='demo-simple-select'
+								labelId='table-body-height-label'
+								id='table-body-height-label'
 								value={tableBodyHeight}
 								style={{
 									width: '200px',
@@ -113,6 +121,8 @@ const DashboardMUI = () => {
 									marginRight: 10,
 								}}
 								onChange={(e) => setTableBodyHeight(e.target.value)}
+								aria-labelledby='table-body-height-label'
+								data-test-id='table-body-height-select'
 							>
 								<MenuItem value={''}>[blank]</MenuItem>
 								<MenuItem value={'400px'}>400px</MenuItem>
@@ -120,10 +130,11 @@ const DashboardMUI = () => {
 								<MenuItem value={'100%'}>100%</MenuItem>
 							</Select>
 						</FormControl>
-						<FormControl>
+						{/* <FormControl>
 							<InputLabel
 								id='demo-simple-select-label'
 								htmlFor='demo-simple-select'
+								sx={{ bgcolor: '#fff' }}
 							>
 								Search Button
 							</InputLabel>
@@ -131,9 +142,36 @@ const DashboardMUI = () => {
 								labelId='demo-simple-select-label'
 								id='demo-simple-select'
 								value={searchBtn}
+								label='Search Button' // Adding label prop for compatibility
+								style={{ width: '200px', marginBottom: '10px' }}
+								onChange={(e) => setSearchBtn(e.target.value)}
+								inputProps={{
+									'data-testid': 'search-btn', // Adding data-testid for the Select component
+									'aria-label': 'Search Button', // Adding aria-label for accessibility
+								}}
+							>
+								<MenuItem value={'true'}>{'true'}</MenuItem>
+								<MenuItem value={'false'}>{'false'}</MenuItem>
+								<MenuItem value={'disabled'}>disabled</MenuItem>
+							</Select>
+						</FormControl> */}
+						<FormControl>
+							{/* <InputLabel
+								id='demo-simple-select-label'
+								label='Search Button'
+								htmlFor='demo-simple-select'
+								sx={{ bgcolor: '#fff' }}
+							>
+								Search Button
+							</InputLabel> */}
+							<Select
+								labelId='demo-simple-select-label'
+								id='demo-simple-select'
+								value={searchBtn}
 								label='Search Button'
 								style={{ width: '200px', marginBottom: '10px' }}
 								onChange={(e) => setSearchBtn(e.target.value)}
+								data-testid='searchbtn'
 							>
 								<MenuItem value={'true'}>{'true'}</MenuItem>
 								<MenuItem value={'false'}>{'false'}</MenuItem>
@@ -141,7 +179,10 @@ const DashboardMUI = () => {
 							</Select>
 						</FormControl>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel
+								id='demo-simple-select-label'
+								sx={{ bgcolor: '#fff' }}
+							>
 								Download Button
 							</InputLabel>
 							<Select
@@ -157,7 +198,10 @@ const DashboardMUI = () => {
 							</Select>
 						</FormControl>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel
+								id='demo-simple-select-label'
+								sx={{ bgcolor: '#fff' }}
+							>
 								Print Button
 							</InputLabel>
 							<Select
@@ -173,7 +217,10 @@ const DashboardMUI = () => {
 							</Select>
 						</FormControl>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel
+								id='demo-simple-select-label'
+								sx={{ bgcolor: '#fff' }}
+							>
 								View Column Button
 							</InputLabel>
 							<Select
@@ -189,7 +236,10 @@ const DashboardMUI = () => {
 							</Select>
 						</FormControl>
 						<FormControl>
-							<InputLabel id='demo-simple-select-label'>
+							<InputLabel
+								id='demo-simple-select-label'
+								sx={{ bgcolor: '#fff' }}
+							>
 								Filter Button
 							</InputLabel>
 							<Select
